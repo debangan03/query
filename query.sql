@@ -1,11 +1,6 @@
-SHOW DATABASES;
 
-
-DELETE from credit.DATABASECHANGELOG
-where id='add-delivery-dispatch-columns-to-invoice-history';
- 
-ALTER TABLE credit.invoice_history
-DROP COLUMN delivery_date_time;
- 
-ALTER TABLE credit.invoice_history
-DROP COLUMN estimated_dispatch_date;
+ALTER TABLE gst_info
+    DROP COLUMN created_by,
+    DROP COLUMN created_on,
+    DROP COLUMN modified_by,
+    DROP COLUMN modified_on;
